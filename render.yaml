@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: my-pocketbase
+    env: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: POCKETBASE_ENV
+        value: production
+    disk:
+      name: data
+      mountPath: /app/pb_data
+      sizeGB: 1
